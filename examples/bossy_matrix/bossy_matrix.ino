@@ -1,9 +1,16 @@
+/*
+  This sketch changes the colors pixels in the LED 8x8 Matrix display depending on 
+  readings from the buttons, switches, joysticks and potentiometers. 
+  Because of the limited space, you can only either see the joysticks or the potentiometers
+  but not the same time
+  IMPORTANT! Use upperleft switch to toggle between joystick mode and potentiometer mode
+*/
+
 #include <Bossy.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include "Adafruit_LEDBackpack.h"
 
-// IMPORTANT! Use upperleft switch to toggle between joystick mode and potentiometer mode
 
 Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();
 Bossy bossy;
@@ -150,7 +157,6 @@ void display_begin() {
   for (int i=1; i <=6; i++) {
     matrix.drawPixel(i, 0, LED_YELLOW);
     matrix.drawPixel(i, 7, LED_YELLOW);
-
   }
 
   for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
@@ -195,7 +201,6 @@ void toggle_mode_if_commanded() {
       matrix.writeDisplay();
       delay(100);
     }
-
     matrix.clear();
     display_begin();
   }

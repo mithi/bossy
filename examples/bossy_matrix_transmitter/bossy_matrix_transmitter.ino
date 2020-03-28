@@ -1,5 +1,14 @@
-// IMPORTANT! Use upperleft switch to toggle between joystick mode and potentiometer mode
-
+/* 
+  This sketch communicates data wireless everytime Bossy detects a change. 
+  It sends two bytes at a time, the first byte contains the id of the input
+  while the second byte contains the current state or reading of that said input
+  
+  It also does everything what the `bossy_matrix.ino`,
+  user feedback is provided via the LED Matrix
+  
+  Use `bossy_simple_receiver.ino` in the receiving microcontroller 
+  to verify that Bossy is successfully transmitting data
+*/
 #include <Bossy.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>

@@ -33,7 +33,7 @@ private:
   void _updateState(const uint8_t input_id);
   void _enableRightMux(void);
   void _enableLeftMux(void);
-  uint16_t _readMux(uint8_t channel);
+  uint16_t _readMux(const uint8_t channel);
   uint8_t _constrain(const uint8_t input_id);
   void _saveDebouncedReading(const uint8_t input_id);
   bool _isButton(const uint8_t input_id);

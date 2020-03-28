@@ -42,7 +42,7 @@ void loop() {
   print_on_scale_change("sw-RL: ", RIGHT_SWITCH_LOWER);
 }
 
-void print_on_button_state_change(String prefix, int input_id) {
+void print_on_button_state_change(const String &prefix, const uint8_t input_id) {
   if (bossy.hasChangedState(input_id)) {
     Serial.print(prefix);
     bossy.savedState(input_id)==PUSHED ?
@@ -50,7 +50,7 @@ void print_on_button_state_change(String prefix, int input_id) {
   }
 }
 
-void print_on_pot_reading_change(String prefix, int input_id) {
+void print_on_pot_reading_change(const String &prefix, const uint8_t input_id) {
   if (bossy.hasChangedReading(input_id)) {
     Serial.print(prefix);
     Serial.print(bossy.savedReading(input_id));
@@ -59,7 +59,7 @@ void print_on_pot_reading_change(String prefix, int input_id) {
   }
 }
 
-void print_on_scale_change(String prefix, int input_id) {
+void print_on_scale_change(const String &prefix, const uint8_t input_id) {
   if (bossy.hasChangedState(input_id)) {
     Serial.print(prefix);
     Serial.println(bossy.savedState(input_id));

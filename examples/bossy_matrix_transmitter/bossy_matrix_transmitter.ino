@@ -1,13 +1,13 @@
-/* 
-  This sketch communicates data wireless everytime Bossy detects a change. 
+/*
+  This sketch communicates data wireless everytime Bossy detects a change.
   It sends two bytes at a time, the first byte contains the id of the input
   while the second byte contains the current state or reading of that said input
-  
+
   It also does everything what the `bossy_matrix.ino`,
   user feedback is provided via the LED Matrix
-  
-  Use `bossy_simple_receiver.ino` in the receiving microcontroller 
-  to verify that Bossy is successfully transmitting data
+
+  Use `bossy_simple_receiver.ino` in the receiving microcontroller
+  to verify that Bossy is successfully transmitting datain
 */
 #include <Bossy.h>
 #include <Wire.h>
@@ -198,17 +198,17 @@ void display_begin() {
   matrix.drawPixel(7, 0, LED_GREEN);
   matrix.drawPixel(7, 7, LED_GREEN);
 
-  for (int i=1; i <=6; i++) {
+  for (uint8_t i = 1; i <=6; i++) {
     matrix.drawPixel(i, 0, LED_YELLOW);
     matrix.drawPixel(i, 7, LED_YELLOW);
 
   }
 
-  for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
+  for (uint8_t i = 0; i < NUMBER_OF_BUTTONS; i++) {
     update_button_display(buttons[i]);
   }
 
-  for (int i = 0; i < NUMBER_OF_SWITCHES; i++) {
+  for (uint8_t i = 0; i < NUMBER_OF_SWITCHES; i++) {
     update_switch_display(switches[i]);
   }
 

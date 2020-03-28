@@ -66,7 +66,7 @@ void loop() {
   }
 
   for (uint8_t i = 0; i < NUMBER_OF_POTENTIOMETERS; i++) {
-    if (bossy.hasChangedState(potentiometers[i])) {
+    if (bossy.hasChangedReading(potentiometers[i])) {
       if (mode == POTMODE) {
         update_pot_display(i, potentiometers[i]);
       }

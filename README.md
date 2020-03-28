@@ -23,7 +23,7 @@ The Bossy library also makes it easy for you to not only to [get started](https:
 
 # Dependencies
 - [nRF24/RF24](https://github.com/nRF24/RF24)
-- [Adafruit libraries such as the [adafruit/Adafruit_LED_Backpack](https://github.com/adafruit/Adafruit_LED_Backpack)
+- Adafruit libraries such as the [adafruit/Adafruit_LED_Backpack](https://github.com/adafruit/Adafruit_LED_Backpack)
 
 # How to use
 Assuming you have a working Bossy:

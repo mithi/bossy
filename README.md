@@ -1,7 +1,7 @@
 Bossy is an open-source custom general purpose controller based on Arduino.
 It uses nrF24l01+ to communicate its commands wirelessly.
 
-|![](https://mithi.github.io/robotics-blog/bossy-matrix-1.gif)|![](https://mithi.github.io/robotics-blog/bossy-matrix-3.gif)|
+|![](https://github.com/mithi/robotics-blog/blob/master/static/images/bossy/bossy-matrix-1.gif)|![](https://github.com/mithi/robotics-blog/blob/master/static/images/bossy/bossy-matrix-3.gif)|
 | ---------- | ---------- |
 
 

@@ -59,7 +59,7 @@ void loop() {
 
   for (uint8_t i = 0; i < NUMBER_OF_STICKS; i++) {
     if (bossy.hasChangedState(sticks[i].id)) {
-      if ( mode == STICKMODE) {
+      if (mode == STICKMODE) {
         update_stick_display(sticks[i]);
       }
     }

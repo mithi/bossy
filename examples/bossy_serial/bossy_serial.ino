@@ -1,3 +1,10 @@
+/*
+  This sketch prints whenever one of Bossy's button, switches, or joystick changes state
+  it also prints when the potentiometer changes its reading.
+  It prints the specific input name and its current registered value on the Serial monitor
+  This sketch does NOT communicate the readings wirelessly. 
+*/
+
 #include <Bossy.h>
 
 Bossy bossy;
@@ -7,8 +14,8 @@ void setup() {
 }
 
 void loop() {
-  //int value = bossy.readValue(LEFT_JOYSTICK_UPPER_X);
-  //int value = bossy.readState(LEFT_BUTTON_UPPER);
+  //uint8_t value = bossy.readValue(LEFT_JOYSTICK_UPPER_X);
+  //uint8_t value = bossy.readState(LEFT_BUTTON_UPPER);
 
   print_on_pot_reading_change("p0: ", POT_LEFT);
   print_on_pot_reading_change("p1: ", POT_LEFT_CENTER);

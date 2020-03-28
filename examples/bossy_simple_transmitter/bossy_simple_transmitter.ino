@@ -1,3 +1,14 @@
+/* 
+  This sketch communicates data wireless everytime Bossy detects a change. 
+  It also prints this in the Serial monitor.
+  It sends two bytes at a time, the first byte contains the id of the input
+  while the second byte contains the current state or reading of that said input.
+  
+  This sketch does NOT use the LED Matrix.  
+  Use `bossy_simple_receiver.ino` in the receiving microcontroller 
+  to verify that Bossy is successfully transmitting data
+*/
+
 #include <Bossy.h>
 #include <SPI.h>
 #include <nRF24L01.h>

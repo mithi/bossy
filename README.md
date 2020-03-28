@@ -11,6 +11,7 @@ There are also plans to make a few derivatives of Bossy such as Tiny Bossy and M
 
 |![](https://mithi.github.io/robotics-blog/tiny-bossy.png)| ![](https://mithi.github.io/robotics-blog/mini-bossy-2.png)|![](https://mithi.github.io/robotics-blog/v2-layout.png)|
 | ---------- | ---------- | ---------- |
+| Tiny Bossy | Mini Bossy | Bossy |
 
 
 You can follow the progress of each Bossy which I document in my
@@ -25,18 +26,15 @@ The Bossy library also makes it easy for you to not only to [get started](https:
 - [Adafruit libraries such as the `Adafruit_LEDBackpack`](https://github.com/adafruit/Adafruit_LED_Backpack)
 
 # How to use
-Assuming you have a working Bossy,
-- Download and Install Arduino
-- Go to your Arduino library directory on a Mac
+Assuming you have a working Bossy:
+
+- Download and Install [Arduino IDE](https://www.arduino.cc/en/Main/Software)
+- Go to your Arduino library directory, on a Mac
 its `~/Documents/Arduino/libraries/`
-- Clone this repo
-``
-$ git clone https://github.com/mithi/bossy.git
-```
-- You should be able to see example sketches you can
+- Clone this repo ` $ git clone https://github.com/mithi/bossy.git `
+
+- You should be able to see example sketches that you can
 upload on your own Bossy
-```
-File > Examples > Bossy
-```
+`File > Examples > Bossy`
 
 

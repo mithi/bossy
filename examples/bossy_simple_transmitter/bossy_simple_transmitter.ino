@@ -1,5 +1,4 @@
 #include <Bossy.h>
-#include <Bossy.h>
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
@@ -12,8 +11,8 @@ const byte ADDRESS[6] = "00001";
 
 // First byte is the input id, Second byte
 // is the state or reading of/from input id
+uint8_t message_to_send[2] = {0xFF, 0x00};
 
-uint8_t message_to_send[2] = {0x00, 0x00};
 Bossy bossy;
 
 void setup() {
@@ -29,7 +28,6 @@ void setup() {
  radio.openWritingPipe(ADDRESS);
  radio.stopListening();
  radio.printDetails();
-
 }
 
 void loop() {
@@ -37,29 +35,28 @@ void loop() {
   for (uint8_t i = 0; i < NUMBER_OF_BUTTONS; i++) {
     if (bossy.hasChangedState(buttons[i].id)) {
       uint8_t value = bossy.savedState(buttons[i].id);
-      send_message(buttons[i].id, value, " Button changed. Sent: ");
+      send_message(buttons[i].id, value, "Button changed. Sent: ");
     }
   }
 
   for (uint8_t i = 0; i < NUMBER_OF_SWITCHES; i++) {
     if (bossy.hasChangedState(switches[i].id)) {
       uint8_t value = bossy.savedState(switches[i].id);
-      send_message(switches[i].id, value, " Switch changed. Sent: ");
+      send_message(switches[i].id, value, "Switch changed. Sent: ");
     }
   }
 
   for (uint8_t i = 0; i < NUMBER_OF_STICKS; i++) {
     if (bossy.hasChangedState(sticks[i].id)) {
       uint8_t value = bossy.savedState(sticks[i].id);
-      send_message(sticks[i].id, value, " Joystick changed. Sent: ");
+      send_message(sticks[i].id, value, "Joystick changed. Sent: ");
     }
   }
 
   for (uint8_t i = 0; i < NUMBER_OF_POTENTIOMETERS; i++) {
     if (bossy.hasChangedReading(potentiometers[i])) {
       uint8_t value = bossy.savedReadingLowRes(potentiometers[i]);
-      send_message(potentiometers[i], value, " Potentiometer changed. Sent: ");
-
+      send_message(potentiometers[i], value, "Potentiometer changed. Sent: ");
     }
   }
 }

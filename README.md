@@ -14,8 +14,8 @@ There are also plans to make a few derivatives of Bossy such as Tiny Bossy and M
 | Tiny Bossy | Mini Bossy | Bossy |
 
 
-You can follow the progress of each Bossy which I document in my
-blog as I make them. It also includes the [BOM/Shopping list](https://mithi.github.io/robotics-blog/blog/bossy/02-bill-of-materials/), step-by-step build instructions,
+You can follow the progress of each Bossy. I document them in my
+[robotics blog](https://github.com/mithi/bossy) as I make them. My blog also includes the [BOM/Shopping list](https://mithi.github.io/robotics-blog/blog/bossy/02-bill-of-materials/), step-by-step build instructions,
 trouble-shooting tips should you wish to make your own Bossy's.
 The Bossy library also makes it easy for you to not only to [get started](https://mithi.github.io/robotics-blog/blog/bossy/09-coding-1/) but also to [modify](https://mithi.github.io/robotics-blog/blog/bossy/10-coding-2/), tweak, and hack your own Bossy's to fit your specific needs.
 

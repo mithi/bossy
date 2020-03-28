@@ -4,6 +4,7 @@
   Because of the limited space, you can only either see the joysticks or the potentiometers
   but not the same time
   IMPORTANT! Use upperleft switch to toggle between joystick mode and potentiometer mode
+  IMPORTANT! This sketch does NOT communicate any of its data wirelessly
 */
 
 #include <Bossy.h>

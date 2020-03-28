@@ -193,6 +193,24 @@ const uint8_t BROKEN_BUTTONS[NUMBER_OF_BOOLEAN_INPUTS] = {
 /**********************
   POSSIBLE STATES
 *************************/
+/*
+The possible states are just
+different ways to interpret a number from 0 to 4
+
+ 0------------1------------2------------3------------4            > SCALE
+ |            |            |            |            |
+ PUSH.........|............|............|............NOT_PUSHED   > button
+ LEFT.........|............|............|............RIGHT        > spdt switch on-on
+ LEFT.........|.........NEUTRAL.........|............RIGHT        > spdt switch on-off-on
+ LEFT....LEFT_CENTER....NEUTRAL.....RIGHT_CENTER.....RIGHT        > joystick x axis
+ UP......UP_CENTER......NEUTRAL.....DOWN_CENTER......DOWN         > joystick y axis
+ UP...........|.........NEUTRAL.........|............DOWN
+ UP...........|............|............|............DOWN
+ |            |            |            |            |
+ 0------------1------------2------------3------------4            > SCALE
+
+*/
+
 
 // these are the possible states
 #define PUSHED 4
@@ -216,19 +234,4 @@ const uint8_t BROKEN_BUTTONS[NUMBER_OF_BOOLEAN_INPUTS] = {
 #define SCALE_3 3
 #define SCALE_4 4
 
-/*
-
- 0------------1------------2------------3------------4            > SCALE
- |            |            |            |            |
- PUSH.........|............|............|............NOT_PUSHED   > button
- LEFT.........|............|............|............RIGHT        > spdt switch on-on
- LEFT.........|.........NEUTRAL.........|............RIGHT        > spdt switch on-off-on
- LEFT....LEFT_CENTER....NEUTRAL.....RIGHT_CENTER.....RIGHT        > joystick x axis
- UP......UP_CENTER......NEUTRAL.....DOWN_CENTER......DOWN         > joystick y axis
- UP...........|.........NEUTRAL.........|............DOWN
- UP...........|............|............|............DOWN
- |            |            |            |            |
- 0------------1------------2------------3------------4            > SCALE
-
-*/
 #endif

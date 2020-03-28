@@ -8,7 +8,8 @@
 Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();
 Bossy bossy;
 
-/* RECALL
+/* RECALL that the possible states are just
+different ways to interpret a number from 0 to 4
 
  0------------1------------2------------3------------4            > SCALE
  |            |            |            |            |
@@ -207,7 +208,7 @@ void toggle_mode_if_commanded() {
 
   if (mode == STICKMODE) {
     for (uint8_t i = 0; i < NUMBER_OF_STICKS; i++) {
-        update_stick_display(sticks[i]);
+      update_stick_display(sticks[i]);
     }
   }
 }

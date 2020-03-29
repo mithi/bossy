@@ -128,7 +128,7 @@ namespace BossyConstants {
 
   const uint8_t LEFT_JOYSTICK_LOWER_Y = 5;
   const uint8_t LEFT_JOYSTICK_LOWER_X = 6;
-  const uint8_t LEFT_JOYSTICK_LOWER_BUTTON= 7;
+  const uint8_t LEFT_JOYSTICK_LOWER_BUTTON = 7;
 
   const uint8_t LEFT_BUTTON_UPPER = 8;
   const uint8_t LEFT_BUTTON_LOWER = 9;

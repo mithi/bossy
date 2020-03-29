@@ -113,7 +113,6 @@ namespace BossyConstants {
     NORMAL // POT_RIGHT
   };
 
-
   /**********************
    INPUT IDs
   *************************/
@@ -216,7 +215,6 @@ namespace BossyConstants {
    0------------1------------2------------3------------4            > SCALE
 
   */
-
 
   // these are the possible states
   const uint8_t PUSHED = 4;

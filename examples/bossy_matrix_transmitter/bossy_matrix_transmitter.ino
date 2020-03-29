@@ -9,15 +9,17 @@
   Use `bossy_simple_receiver.ino` in the receiving microcontroller
   to verify that Bossy is successfully transmitting datain
 */
-#include <Bossy.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include "Adafruit_LEDBackpack.h"
-
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
 #include <printf.h>
+
+#include <Bossy.h>
+using namespace BossyMatrixHelpers;
+using namespace BossyConstants;
 
 #define CE_PIN 9
 #define CSN_PIN 10
@@ -47,7 +49,7 @@ different ways to interpret a number from 0 to 4
  0------------1------------2------------3------------4            > SCALE
 
 */
-const uint8_t NUMBER_OF_STATES = 5;
+
 const uint8_t button_colors[NUMBER_OF_STATES] =  {LED_GREEN, LED_GREEN, LED_GREEN, LED_GREEN, LED_RED};
 const uint8_t stick_first_colors[NUMBER_OF_STATES] = {LED_RED, LED_RED, LED_GREEN, LED_GREEN, LED_GREEN};
 const uint8_t stick_second_colors[NUMBER_OF_STATES] = {LED_GREEN, LED_GREEN, LED_GREEN, LED_RED, LED_RED};

@@ -1,19 +1,24 @@
-/* 
-  This sketch communicates data wireless everytime Bossy detects a change. 
+/*
+  This sketch communicates data wireless everytime Bossy detects a change.
   It also prints this in the Serial monitor.
   It sends two bytes at a time, the first byte contains the id of the input
   while the second byte contains the current state or reading of that said input.
-  
-  This sketch does NOT use the LED Matrix.  
-  Use `bossy_simple_receiver.ino` in the receiving microcontroller 
+
+  This sketch does NOT use the LED Matrix.
+  Use `bossy_simple_receiver.ino` in the receiving microcontroller
   to verify that Bossy is successfully transmitting data
 */
 
-#include <Bossy.h>
+
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
 #include <printf.h>
+
+#include <Bossy.h>
+
+using namespace BossyInputSets;
+using namespace BossyConstants;
 
 #define CE_PIN 9
 #define CSN_PIN 10
@@ -44,30 +49,30 @@ void setup() {
 void loop() {
 
   for (uint8_t i = 0; i < NUMBER_OF_BUTTONS; i++) {
-    if (bossy.hasChangedState(buttons[i].id)) {
-      uint8_t value = bossy.savedState(buttons[i].id);
-      send_message(buttons[i].id, value, "Button changed. Sent: ");
+    if (bossy.hasChangedState(button_ids[i])) {
+      uint8_t value = bossy.savedState(button_ids[i]);
+      send_message(button_ids[i], value, "Button changed. Sent: ");
     }
   }
 
   for (uint8_t i = 0; i < NUMBER_OF_SWITCHES; i++) {
-    if (bossy.hasChangedState(switches[i].id)) {
-      uint8_t value = bossy.savedState(switches[i].id);
-      send_message(switches[i].id, value, "Switch changed. Sent: ");
+    if (bossy.hasChangedState(switch_ids[i])) {
+      uint8_t value = bossy.savedState(switch_ids[i]);
+      send_message(switch_ids[i], value, "Switch changed. Sent: ");
     }
   }
 
   for (uint8_t i = 0; i < NUMBER_OF_STICKS; i++) {
-    if (bossy.hasChangedState(sticks[i].id)) {
-      uint8_t value = bossy.savedState(sticks[i].id);
-      send_message(sticks[i].id, value, "Joystick changed. Sent: ");
+    if (bossy.hasChangedState(stick_ids[i])) {
+      uint8_t value = bossy.savedState(stick_ids[i]);
+      send_message(stick_ids[i], value, "Joystick changed. Sent: ");
     }
   }
 
   for (uint8_t i = 0; i < NUMBER_OF_POTENTIOMETERS; i++) {
-    if (bossy.hasChangedReading(potentiometers[i])) {
-      uint8_t value = bossy.savedReadingLowRes(potentiometers[i]);
-      send_message(potentiometers[i], value, "Potentiometer changed. Sent: ");
+    if (bossy.hasChangedReading(potentiometer_ids[i])) {
+      uint8_t value = bossy.savedReadingLowRes(potentiometer_ids[i]);
+      send_message(potentiometer_ids[i], value, "Potentiometer changed. Sent: ");
     }
   }
 }

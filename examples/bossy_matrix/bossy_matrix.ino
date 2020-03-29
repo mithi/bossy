@@ -1,17 +1,18 @@
 /*
-  This sketch changes the colors pixels in the LED 8x8 Matrix display depending on 
-  readings from the buttons, switches, joysticks and potentiometers. 
+  This sketch changes the colors pixels in the LED 8x8 Matrix display depending on
+  readings from the buttons, switches, joysticks and potentiometers.
   Because of the limited space, you can only either see the joysticks or the potentiometers
   but not the same time
   IMPORTANT! Use upperleft switch to toggle between joystick mode and potentiometer mode
   IMPORTANT! This sketch does NOT communicate any of its data wirelessly
 */
-
-#include <Bossy.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include "Adafruit_LEDBackpack.h"
 
+#include <Bossy.h>
+using namespace BossyConstants;
+using namespace BossyMatrixHelpers;
 
 Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();
 Bossy bossy;
@@ -32,7 +33,6 @@ different ways to interpret a number from 0 to 4
  0------------1------------2------------3------------4            > SCALE
 
 */
-const uint8_t NUMBER_OF_STATES = 5;
 const uint8_t button_colors[NUMBER_OF_STATES] =  {LED_GREEN, LED_GREEN, LED_GREEN, LED_GREEN, LED_RED};
 const uint8_t stick_first_colors[NUMBER_OF_STATES] = {LED_RED, LED_RED, LED_GREEN, LED_GREEN, LED_GREEN};
 const uint8_t stick_second_colors[NUMBER_OF_STATES] = {LED_GREEN, LED_GREEN, LED_GREEN, LED_RED, LED_RED};

@@ -2,11 +2,11 @@
   This sketch prints whenever one of Bossy's button, switches, or joystick changes state
   it also prints when the potentiometer changes its reading.
   It prints the specific input name and its current registered value on the Serial monitor
-  This sketch does NOT communicate the readings wirelessly. 
+  This sketch does NOT communicate the readings wirelessly.
 */
 
 #include <Bossy.h>
-
+using namespace BossyConstants;
 Bossy bossy;
 
 void setup() {

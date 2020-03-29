@@ -3,7 +3,9 @@
 
 #include "Arduino.h"
 #include "BossyConstants.h"
-#include "MatrixHelpers.h"
+#include "BossyInputSets.h"
+#include "BossyMatrixHelpers.h"
+
 
 /**********************
   BOSSY CONTROLLER CLASS
@@ -26,8 +28,8 @@ public:
   bool hasChangedReading(const uint8_t input_id);
 
 private:
-  uint16_t _readings[NUMBER_OF_CHANNELS];
-  uint8_t _states[NUMBER_OF_CHANNELS];
+  uint16_t _readings[BossyConstants::NUMBER_OF_CHANNELS];
+  uint8_t _states[BossyConstants::NUMBER_OF_CHANNELS];
   void _update(const uint8_t input_id);
   void _updateReading(const uint8_t input_id);
   void _updateState(const uint8_t input_id);

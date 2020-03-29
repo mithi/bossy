@@ -1,6 +1,8 @@
 #include "Arduino.h"
 #include "Bossy.h"
 
+using namespace BossyConstants;
+
 Bossy::Bossy(void) {
   pinMode(s0, OUTPUT);
   pinMode(s1, OUTPUT);
@@ -159,7 +161,7 @@ uint16_t Bossy::_readMux(const uint8_t channel) {
 }
 
 bool Bossy::_isButton(const uint8_t input_id) {
-  for (uint8_t i = 0; i < NUMBER_OF_BOOLEAN_INPUTS; i++) {
+  for (uint8_t i = 0; i < NUMBER_OF_BUTTONS; i++) {
     if (BOOLEAN_INPUTS[i] == input_id) { return true; }
   }
   return false;
